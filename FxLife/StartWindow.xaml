@@ -1,0 +1,19 @@
+﻿<Window x:Class="FxLife.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FxLife"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="322.246" Width="346.398" Closed="Window_Closed">
+    <Grid  Name="grid">
+        <Button Content="Go to game" Name="ChoiceButton" HorizontalAlignment="Left" Height="33" Margin="175,226,0,0" VerticalAlignment="Top" Width="83" Click="Button_Click"/>
+        <CheckBox Content="Автоматическая расстановка" Name="AutoCheck" Click="CheckBox_Click" HorizontalAlignment="Left" Height="18" Margin="10,17,0,0" VerticalAlignment="Top" Width="186"/>
+        <CheckBox Content="Ручная расстановка" Name="ManualChek" Click="CheckBox_Click"  HorizontalAlignment="Left" Height="18" Margin="10,40,0,0" VerticalAlignment="Top" Width="180"/>
+        <CheckBox Content="Случайная сохраненная" Name="RnResCheck" IsEnabled="{Binding Path=HaveReservedGame}"  Click="CheckBox_Click" HorizontalAlignment="Left" Height="18" Margin="10,63,0,0" VerticalAlignment="Top" Width="180"/>
+        <CheckBox Content="Сохраненная" Name="ResCheck" Click="CheckBox_Click" IsEnabled="{Binding Path=HaveReservedGame}" HorizontalAlignment="Left" Height="18" Margin="10,86,0,0" VerticalAlignment="Top" Width="180" RenderTransformOrigin="0.455,1.318"/>
+        <ListBox Name="reservLb" SelectionChanged="reservLb_SelectionChanged" BorderBrush="Transparent"  HorizontalAlignment="Left" Height="91" Margin="2,109,0,0" VerticalAlignment="Top" Width="234"/>
+        <Button Content="Remove entery" Background="Red" Name="DelButton" HorizontalAlignment="Left" Height="21" Margin="241,109,0,0" VerticalAlignment="Top" Width="87" Click="DelButton_Click"/>
+        <Button Content="Update base" Click="UpdateButton_Click" x:Name="UpdateButton" HorizontalAlignment="Left" Height="33" Margin="62,226,0,0" VerticalAlignment="Top" Width="85"/>
+    </Grid>
+</Window>
